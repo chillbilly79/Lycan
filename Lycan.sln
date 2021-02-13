@@ -2,6 +2,16 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Api", "Lycan.Api\Lycan.Api.csproj", "{6AFA48D0-4ADD-4506-96FE-A5819B619233}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Core", "Lycan.Core\Lycan.Core.csproj", "{6B41551E-CA01-48DC-8468-EAB448BF7D55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Extensions.Broker.Abstractions", "Lycan.Extensions.Broker.Abstractions\Lycan.Extensions.Broker.Abstractions.csproj", "{E38014AB-05F1-44A4-AB24-4F193711CE96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Extensions.Broker.TdAmeritrade", "Lycan.Extensions.Broker.TdAmeritrade\Lycan.Extensions.Broker.TdAmeritrade.csproj", "{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Web", "Lycan.Web\Lycan.Web.csproj", "{6E9E4432-3DB6-4D78-8153-5A8628175061}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Infrastructure", "Lycan.Infrastructure\Lycan.Infrastructure.csproj", "{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +22,25 @@ Global
 		{6AFA48D0-4ADD-4506-96FE-A5819B619233}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6AFA48D0-4ADD-4506-96FE-A5819B619233}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6AFA48D0-4ADD-4506-96FE-A5819B619233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B41551E-CA01-48DC-8468-EAB448BF7D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B41551E-CA01-48DC-8468-EAB448BF7D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B41551E-CA01-48DC-8468-EAB448BF7D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B41551E-CA01-48DC-8468-EAB448BF7D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38014AB-05F1-44A4-AB24-4F193711CE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38014AB-05F1-44A4-AB24-4F193711CE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38014AB-05F1-44A4-AB24-4F193711CE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38014AB-05F1-44A4-AB24-4F193711CE96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E9E4432-3DB6-4D78-8153-5A8628175061}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E9E4432-3DB6-4D78-8153-5A8628175061}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E9E4432-3DB6-4D78-8153-5A8628175061}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E9E4432-3DB6-4D78-8153-5A8628175061}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
