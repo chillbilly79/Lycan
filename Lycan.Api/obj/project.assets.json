@@ -788,24 +788,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brnco\\.nuget\\packages\\": {}
+    "C:\\Users\\zhlav\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brnco\\RiderProjects\\Lycan\\Lycan.Api\\Lycan.Api.csproj",
+      "projectUniqueName": "D:\\Development\\Lycan\\Lycan.Api\\Lycan.Api.csproj",
       "projectName": "Lycan.Api",
-      "projectPath": "C:\\Users\\brnco\\RiderProjects\\Lycan\\Lycan.Api\\Lycan.Api.csproj",
-      "packagesPath": "C:\\Users\\brnco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brnco\\RiderProjects\\Lycan\\Lycan.Api\\obj\\",
+      "projectPath": "D:\\Development\\Lycan\\Lycan.Api\\Lycan.Api.csproj",
+      "packagesPath": "C:\\Users\\zhlav\\.nuget\\packages\\",
+      "outputPath": "D:\\Development\\Lycan\\Lycan.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\brnco\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\zhlav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
