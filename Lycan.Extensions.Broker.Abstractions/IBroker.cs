@@ -24,5 +24,8 @@ namespace Lycan.Extensions.Broker.Abstractions
         public Task<IEnumerable<Order>> GetOrdersAsync(GetOrderQuery query);
 
         public Task PlaceOrderAsync(PlaceOrderBody body);
+        public Task ReplaceOrderAsync(long orderId, PlaceOrderBody body);
+
+        public Task<OptionChain> GetOptionChainAsync(OptionChainRequest request);
     }
 }
