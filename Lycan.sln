@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Infrastructure", "Lyc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Tests", "Lycan.Tests\Lycan.Tests.csproj", "{B8D0EAE0-974E-45D5-AB74-AFE019781FA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Web", "Lycan.Web\Lycan.Web.csproj", "{C3B3ECE4-0284-4684-8534-429CBF000D25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Web", "Lycan.Web\Lycan.Web.csproj", "{C3B3ECE4-0284-4684-8534-429CBF000D25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
