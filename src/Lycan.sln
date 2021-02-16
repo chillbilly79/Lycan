@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Extensions.Broker.Abs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Extensions.Broker.TdAmeritrade", "Lycan.Extensions.Broker.TdAmeritrade\Lycan.Extensions.Broker.TdAmeritrade.csproj", "{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Infrastructure", "Lycan.Infrastructure\Lycan.Infrastructure.csproj", "{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Tests", "Lycan.Tests\Lycan.Tests.csproj", "{B8D0EAE0-974E-45D5-AB74-AFE019781FA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lycan.Web", "Lycan.Web\Lycan.Web.csproj", "{C3B3ECE4-0284-4684-8534-429CBF000D25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lycan.Infrastructure", "..\Infrastructure\src\Lycan.Infrastructure\Lycan.Infrastructure.csproj", "{CC0622E2-F29A-4E8B-9896-D6CD183D7556}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +33,6 @@ Global
 		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BEADD6C-BED5-46B4-A0A1-4D08C541D002}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BD9F8D5-383D-45FB-B5EC-050A1A2E7951}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8D0EAE0-974E-45D5-AB74-AFE019781FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8D0EAE0-974E-45D5-AB74-AFE019781FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D0EAE0-974E-45D5-AB74-AFE019781FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{C3B3ECE4-0284-4684-8534-429CBF000D25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3B3ECE4-0284-4684-8534-429CBF000D25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3B3ECE4-0284-4684-8534-429CBF000D25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC0622E2-F29A-4E8B-9896-D6CD183D7556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC0622E2-F29A-4E8B-9896-D6CD183D7556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC0622E2-F29A-4E8B-9896-D6CD183D7556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC0622E2-F29A-4E8B-9896-D6CD183D7556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
