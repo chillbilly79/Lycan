@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+      <UserSecretsId>b46fb88c-e6b6-478a-a415-13d904003b2c</UserSecretsId>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Refit" Version="5.2.4" />
+        <PackageReference Include="Refit.HttpClientFactory" Version="5.2.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Lycan.Extensions.Broker.Abstractions\Lycan.Extensions.Broker.Abstractions.csproj" />
+    </ItemGroup>
+
+</Project>
