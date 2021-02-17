@@ -5,7 +5,6 @@
     <TargetFramework>net5.0</TargetFramework>
     <!-- Roll forward to future major versions of the netcoreapp as needed -->
     <RollForward>Major</RollForward>
-    <RootNamespace>Infrastructure</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup><!-- CDK Construct Library dependencies -->
@@ -16,6 +15,10 @@
     -->
   
     <PackageReference Include="Amazon.CDK" Version="1.89.0" />
+  
+    <PackageReference Include="Amazon.CDK.AWS.S3" Version="1.89.0" />
+  
+    <PackageReference Include="Amazon.CDK.AWS.S3.Deployment" Version="1.89.0" />
   </ItemGroup>
 
 </Project>

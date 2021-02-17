@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Lycan.Infrastructure;
 
-namespace Infrastructure
+namespace Lycan.Infrastructure
 {
     sealed class Program
     {

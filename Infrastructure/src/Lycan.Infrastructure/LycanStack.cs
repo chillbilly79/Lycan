@@ -6,7 +6,7 @@ namespace Lycan.Infrastructure
     {
         internal LycanStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
         {
-            // The code that defines your stack goes here
+            var s3 = new S3StaticSiteGenerator(this);
         }
     }
 }
