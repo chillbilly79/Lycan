@@ -11,16 +11,10 @@ namespace Lycan.Infrastructure
             var lycanBucket = new Bucket(scope, "LycanWebsiteBucket", new BucketProps()
             {
                 WebsiteIndexDocument = "index.html",
-                PublicReadAccess = true
+                PublicReadAccess = true,
+                BucketName = "lycan-website-bucket"
             });
 
-            new BucketDeployment(scope, "DeployLycanWebsite", new BucketDeploymentProps()
-             {
-                 Sources = new []{ Source.Asset("../src/Lycan.Web/publish")},
-                 DestinationBucket = lycanBucket,
-                 DestinationKeyPrefix = "web/static"
-             });
-            
             new CfnOutput(scope, "BucketDomain", new CfnOutputProps(){
                 Value = lycanBucket.BucketWebsiteDomainName
             });
