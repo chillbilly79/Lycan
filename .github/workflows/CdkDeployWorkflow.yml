@@ -17,8 +17,8 @@ jobs:
           cdk_version: '1.89.0'
           working_dir: 'Infrastructure'
         env:
-          AWS_ACCESS_KEY_ID: ${{ AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
       - name: cdk deploy
         uses: two4suited/aws-cdk-dotnet-github-action@master
@@ -27,6 +27,6 @@ jobs:
           args: '--require-approval never'
           working_dir: 'Infrastructure'
         env:
-          AWS_ACCESS_KEY_ID: ${{ AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
