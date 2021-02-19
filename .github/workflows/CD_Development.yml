@@ -54,6 +54,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
+          S3GeneratorOptions.S3BucketName: ${{ secrets.S3_STATIC_SITE_BUCKET }}
       - name: cdk deploy
         id: deploy
         uses: two4suited/aws-cdk-dotnet-github-action@master
