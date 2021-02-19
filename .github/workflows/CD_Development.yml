@@ -25,14 +25,12 @@ jobs:
     - name: Test
       working-directory: ./src
       run: dotnet test --no-build --verbosity normal
- 
-  publish: 
-    needs: build
-    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+  aws_cdk:
+    needs: build
+    environment: Develop
+    runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
@@ -44,12 +42,7 @@ jobs:
         with:
           name: Lycan.Web
           path: ./src/Lycan.Web/publish
-
-  aws_cdk:
-    needs: build
-    environment: Develop
-    runs-on: ubuntu-latest
-    steps:
+          
       - uses: actions/checkout@v2
       - name: cdk synth
         id: synth
@@ -74,6 +67,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
+          S3GeneratorOptions.S3BucketName: ${{ secrets.S3_STATIC_SITE_BUCKET }}
           
       - name: Upload S3      
         uses: shallwefootball/upload-s3-action@v1.1.3
