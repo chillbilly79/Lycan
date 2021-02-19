@@ -47,7 +47,7 @@ jobs:
         uses: microsoft/variable-substitution@v1
         with:
          # comma separated list of XML/JSON/YAML files in which tokens are to be substituted. Files names must be specified relative to the folder-path.
-          files: 'Infrastructure\src\Lycan.Infrastructure\appsettings.json'
+          files: 'Infrastructure/src/Lycan.Infrastructure/appsettings.json'
         env: 
           S3GeneratorOptions.S3BucketName: ${{ secrets.S3_STATIC_SITE_BUCKET }}        
       
