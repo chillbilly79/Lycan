@@ -23,9 +23,8 @@ jobs:
       - name: cdk deploy
         uses: two4suited/aws-cdk-dotnet-github-action@master
         with:
-          cdk_subcommand: 'deploy'
-          cdk_version: '1.89.0'
-          actions_comment: false
+          cdk_subcommand: 'deploy'          
+          actions_comment: true
           args: '--require-approval never'
           working_dir: 'Infrastructure'
         env:
