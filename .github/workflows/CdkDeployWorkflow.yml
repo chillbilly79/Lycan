@@ -23,9 +23,10 @@ jobs:
       - name: cdk deploy
         uses: two4suited/aws-cdk-dotnet-github-action@master
         with:
-          cdk_subcommand: 'deploy'          
-          args: '--require-approval never'
+          cdk_subcommand: 'deploy'
           working_dir: 'Infrastructure'
+          args: '--require-approval never'
+          actions_comment: false          
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
