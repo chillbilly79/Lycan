@@ -10,7 +10,7 @@ namespace Lycan.Infrastructure
         {
             var lycanBucket = new Bucket(scope, "LycanWebsiteBucket", new BucketProps()
             {
-                WebsiteIndexDocument = "index.html",
+                WebsiteIndexDocument = "wwwroot/index.html",
                 PublicReadAccess = true,
                 BucketName = options.S3BucketName
             });
