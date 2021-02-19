@@ -82,6 +82,7 @@ jobs:
           name: LycanWeb
           path: LycanWeb/publish
           
+#          
 #      - name: Upload S3      
 #        uses: shallwefootball/upload-s3-action@v1.1.3
 #        with:        
@@ -89,4 +90,5 @@ jobs:
 #          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}    
 #          aws_bucket: ${{ secrets.S3_STATIC_SITE_BUCKET }}    
 #          source_dir: "LycanWeb/publish/LycanWeb.zip"
+#
           
