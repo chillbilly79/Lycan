@@ -2,10 +2,11 @@ name: CDK_Deploy
 
 on:
   push:
-      branches: [ master, development ]
-
+      branches: [ development ]
+      
 jobs:
   aws_cdk:
+    environment: Develop
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
