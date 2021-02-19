@@ -21,6 +21,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
       - name: cdk deploy
+        id: deploy
         uses: two4suited/aws-cdk-dotnet-github-action@master
         with:
           cdk_subcommand: 'deploy'
