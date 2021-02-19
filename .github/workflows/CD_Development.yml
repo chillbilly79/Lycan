@@ -41,9 +41,8 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Lycan.Web
-          path: ./src/Lycan.Web/publish
-          
-      - uses: actions/checkout@v2
+          path: ./src/Lycan.Web/publish         
+      
       - name: cdk synth
         id: synth
         uses: two4suited/aws-cdk-dotnet-github-action@master
