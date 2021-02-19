@@ -24,7 +24,6 @@ jobs:
         uses: two4suited/aws-cdk-dotnet-github-action@master
         with:
           cdk_subcommand: 'deploy'          
-          actions_comment: true
           args: '--require-approval never'
           working_dir: 'Infrastructure'
         env:
