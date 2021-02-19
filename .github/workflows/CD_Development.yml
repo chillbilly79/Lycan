@@ -1,0 +1,85 @@
+name: CD_Development
+
+on:
+  push:
+      branches: [ development ]
+      
+jobs:
+
+  build:
+ 
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      working-directory: ./src
+      run: dotnet restore
+    - name: Build
+      working-directory: ./src
+      run: dotnet build --no-restore
+    - name: Test
+      working-directory: ./src
+      run: dotnet test --no-build --verbosity normal
+ 
+  publish: 
+    needs: build
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: publish
+        working-directory: "./src/Lycan.Web"
+        run: dotnet publish -c release -o publish
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Lycan.Web
+          path: ./src/Lycan.Web/publish
+
+  aws_cdk:
+    needs: build
+    environment: Develop
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: cdk synth
+        id: synth
+        uses: two4suited/aws-cdk-dotnet-github-action@master
+        with:
+          cdk_subcommand: 'synth'
+          cdk_version: '1.89.0'
+          working_dir: 'Infrastructure'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-west-2'
+      - name: cdk deploy
+        id: deploy
+        uses: two4suited/aws-cdk-dotnet-github-action@master
+        with:
+          cdk_subcommand: 'deploy'
+          working_dir: 'Infrastructure'
+          args: '--require-approval never'
+          actions_comment: false          
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'us-west-2'
+          
+      - name: Upload S3      
+        uses: shallwefootball/upload-s3-action@v1.1.3
+        with:        
+          aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}   
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}    
+          aws_bucket: ${{ S3_STATIC_SITE_BUCKET }}    
+          source_dir: "./src/Lycan.Web/publish"
+          
