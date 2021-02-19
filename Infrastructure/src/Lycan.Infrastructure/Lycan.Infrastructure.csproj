@@ -19,6 +19,16 @@
     <PackageReference Include="Amazon.CDK.AWS.S3" Version="1.89.0" />
   
     <PackageReference Include="Amazon.CDK.AWS.S3.Deployment" Version="1.89.0" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="5.0.0" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+  
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
   </ItemGroup>
 
 </Project>

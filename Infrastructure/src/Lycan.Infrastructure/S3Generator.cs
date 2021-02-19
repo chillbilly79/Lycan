@@ -6,13 +6,13 @@ namespace Lycan.Infrastructure
 {
     public class S3StaticSiteGenerator
     {
-        public S3StaticSiteGenerator(Construct scope)
+        public S3StaticSiteGenerator(Construct scope, S3GeneratorOptions options)
         {
             var lycanBucket = new Bucket(scope, "LycanWebsiteBucket", new BucketProps()
             {
                 WebsiteIndexDocument = "index.html",
                 PublicReadAccess = true,
-                BucketName = "lycan-website-bucket"
+                BucketName = options.S3BucketName
             });
 
             new CfnOutput(scope, "BucketDomain", new CfnOutputProps(){

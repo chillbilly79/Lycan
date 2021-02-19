@@ -4,9 +4,9 @@ namespace Lycan.Infrastructure
 {
     public class LycanStack : Stack
     {
-        internal LycanStack(Construct scope, string id, IStackProps props = null) : base(scope, id, props)
+        internal LycanStack(Construct scope, string id, S3GeneratorOptions options, IStackProps props = null) : base(scope, id, props)
         {
-            var s3 = new S3StaticSiteGenerator(this);
+            var s3 = new S3StaticSiteGenerator(this, options);
         }
     }
 }
