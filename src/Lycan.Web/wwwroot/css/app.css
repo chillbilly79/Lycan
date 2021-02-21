@@ -10829,31 +10829,31 @@ ul {
 /* Fonts */
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto-Thin.ttf");
+  src: url("../fonts/Roboto/Roboto-Thin.ttf");
   font-weight: 100;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto-Light.ttf");
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
   font-weight: 300;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto-Medium.ttf");
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url("../../fonts/Roboto/Roboto-Bold.ttf");
+  src: url("../fonts/Roboto/Roboto-Bold.ttf");
   font-weight: 700;
 }
 
@@ -19158,10 +19158,6 @@ table.info-table tr th {
           padding-top: 80px;
         }
 }
-
-/*-------------------------------------------------------------------*/
-
-/*# sourceMappingURL=style.css.map */
 
 #blazor-error-ui {
     background: lightyellow;
@@ -33862,5 +33858,3 @@ table.info-table tr th {
     transform: rotate(359deg);
   }
 }
-
-/*# sourceMappingURL=materialdesignicons.css.map */
