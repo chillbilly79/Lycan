@@ -4,8 +4,4 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Lycan.Core\Lycan.Core.csproj" />
-    </ItemGroup>
-
 </Project>

@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lycan.Web.Pages.Account {
-  public partial class Login : ComponentBase {
-    
+namespace Lycan.Web.Layouts.DashboardLayout {
+  public partial class DashboardLayout : LayoutComponentBase {
+
   }
 }

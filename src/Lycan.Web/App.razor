@@ -1,10 +1,26 @@
-<Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
+@using Lycan.Web.Layouts.DashboardLayout;
+@using Lycan.Web.Components.Auth;
+
+<CascadingAuthenticationState>
+  <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(DashboardLayout)" />
+      <AuthorizeRouteView
+        RouteData="@routeData"
+        DefaultLayout="@typeof(DashboardLayout)">
+        <NotAuthorized>
+          @if (!context.User.Identity.IsAuthenticated) {
+            <RedirectToLogin />
+          }
+          else {
+            <p>You are not authorized to access this resource.</p>
+          }
+        </NotAuthorized>
+      </AuthorizeRouteView>
     </Found>
     <NotFound>
-        <LayoutView Layout="@typeof(DashboardLayout)">
-            <p>Sorry, there's nothing at this address.</p>
-        </LayoutView>
+      <LayoutView Layout="@typeof(DashboardLayout)">
+        <p>Sorry, there's nothing at this address.</p>
+      </LayoutView>
     </NotFound>
-</Router>
+  </Router>
+</CascadingAuthenticationState>
