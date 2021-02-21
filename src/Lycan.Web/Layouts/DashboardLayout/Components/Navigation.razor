@@ -1,39 +1,18 @@
-﻿<div class="sidebar">
-  <ul class="navigation-menu">
-    <li class="nav-category-divider">MAIN</li>
-    <li>
-      <a href="index.html">
-        <span class="link-title">Dashboard</span>
-        <i class="mdi mdi-gauge link-icon"></i>
-      </a>
-    </li>
-  </ul>
-  <div class="sidebar_footer">
-    <div class="user-account">
-      <div class="user-profile-item-tittle">Switch User</div>
-      <div class="user-profile-itemcategory">
-        <a class="user-profile-item" href="#">
-          <div class="avatar">
-            <img class="profile-img img-rounded img-sm" src="http://www.placehold.it/50x50" alt="profile image"> Chilbilly Hill
-          </div>
+﻿@using Microsoft.AspNetCore.Components.Authorization;
+
+<ul class="navigation-menu">
+  <li class="nav-category-divider">MAIN</li>
+  <AuthorizeView>
+    <Authorized>
+      <li>
+        <a href="/">
+          <span class="link-title">Dashboard</span>
+          <i class="mdi mdi-gauge link-icon"></i>
         </a>
-      </div>
-      <a class="user-profile-item" href="#"><i class="mdi mdi-account"></i> Profile</a>
-      <a class="user-profile-item" href="#"><i class="mdi mdi-settings"></i> Account Settings</a>
-      <a class="btn btn-primary btn-logout" href="#">Logout</a>
-    </div>
-    <div class="btn-group admin-access-level">
-      <div class="avatar">
-        <img class="profile-img" src="http://www.placehold.it/50x50" alt="">
-      </div>
-      <div class="user-type-wrapper">
-        <p class="user_name">Stinky Hlavinky</p>
-        <div class="d-flex align-items-center">
-          <div class="status-indicator small rounded-indicator bg-success"></div>
-          <small class="user_access_level">Admin</small>
-        </div>
-      </div>
-      <i class="arrow mdi mdi-chevron-right"></i>
-    </div>
-  </div>
-</div>
+      </li>
+    </Authorized>
+    <NotAuthorized>
+
+    </NotAuthorized>
+  </AuthorizeView>
+</ul>

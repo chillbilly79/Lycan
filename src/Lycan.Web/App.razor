@@ -4,8 +4,7 @@
 <CascadingAuthenticationState>
   <Router AppAssembly="@typeof(Program).Assembly">
     <Found Context="routeData">
-      <AuthorizeRouteView RouteData="@routeData"
-                          DefaultLayout="@typeof(DashboardLayout)">
+      <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(DashboardLayout)">
         <NotAuthorized>
           @if (!context.User.Identity.IsAuthenticated) {
             <RedirectToLogin />
