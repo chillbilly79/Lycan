@@ -1,0 +1,17 @@
+﻿@inherits LayoutComponentBase
+
+@using Lycan.Web.Layouts.DashboardLayout.Components;
+
+<Header />
+<div class="page-body">
+  <Navigation />
+  <!--
+  <RightSidebar />
+  -->
+  <div class="page-content-wrapper">
+    <div class="page-content-wrapper-inner">
+      @Body
+    </div>
+    <Footer />
+  </div>
+</div>
