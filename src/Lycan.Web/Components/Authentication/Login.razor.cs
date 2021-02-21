@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lycan.Web.Components.Auth {
+namespace Lycan.Web.Components.Authentication {
   public partial class Login : ComponentBase {
     [Inject]
     NavigationManager Navigation { get; set; }
