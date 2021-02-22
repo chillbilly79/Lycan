@@ -17,9 +17,10 @@ namespace Lycan.Web
 
       builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
-      builder.Services.AddOidcAuthentication(options => {
+      //<script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+      //builder.Services.AddOidcAuthentication(options => {
 
-      });
+      //});
 
       await builder.Build().RunAsync();
     }

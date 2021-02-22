@@ -1,36 +1,34 @@
 ﻿@using Microsoft.AspNetCore.Components.Authorization;
 
-  <AuthorizeView>
-    <Authorized>
-      <div class="sidebar_footer@(_sidebarFooterOpen ? " opened" :"")" @onclick="HandleSidebarFooterClick">
-        <div class="user-account">
-          <a class="user-profile-item" href="#"><i class="mdi mdi-account"></i> Profile</a>
-          <a class="user-profile-item" href="#"><i class="mdi mdi-settings"></i> Account Settings</a>
-          <a class="btn btn-primary btn-logout" href="#">Logout</a>
-        </div>
-        <div class="btn-group admin-access-level">
-          <div class="avatar">
-            <img class="profile-img" src="" alt="" style="width:50px;height:50px;" />
-          </div>
-          <div class="user-type-wrapper">
-            <p class="user_name">Stinky Hlavinky</p>
-            <div class="d-flex align-items-center">
-              <div class="status-indicator small rounded-indicator bg-success"></div>
-              <small class="user_access_level">Admin</small>
-            </div>
-          </div>
-          <i class="arrow mdi mdi-chevron-right"></i>
-        </div>
+
+
+<div class="sidebar_footer@(_sidebarFooterOpen ? " opened" :"")" @onclick="HandleSidebarFooterClick">
+  <div class="user-account">
+    <a class="user-profile-item" href="#"><i class="mdi mdi-account"></i> Profile</a>
+    <a class="user-profile-item" href="#"><i class="mdi mdi-settings"></i> Account Settings</a>
+    <a class="btn btn-primary btn-logout" href="#">Logout</a>
+  </div>
+  <div class="btn-group admin-access-level">
+    <div class="avatar">
+      <img class="profile-img" src="" alt="" style="width:50px;height:50px;" />
+    </div>
+    <div class="user-type-wrapper">
+      <p class="user_name">Stinky Hlavinky</p>
+      <div class="d-flex align-items-center">
+        <div class="status-indicator small rounded-indicator bg-success"></div>
+        <small class="user_access_level">Admin</small>
       </div>
-    </Authorized>
-    <NotAuthorized>
-      <div class="sidebar_footer@(_sidebarFooterOpen ? " opened" :"")" @onclick="HandleSidebarFooterLoginClick">
-        <div class="btn-group admin-access-level">
-          <div class="user-type-wrapper">
-            <p class="user_name">Login</p>
-          </div>
-          <i class="arrow mdi mdi-chevron-right"></i>
-        </div>
-      </div>
-    </NotAuthorized>
-  </AuthorizeView>
+    </div>
+    <i class="arrow mdi mdi-chevron-right"></i>
+  </div>
+</div>
+<!--
+<div class="sidebar_footer@(_sidebarFooterOpen ? " opened" :"")" @onclick="HandleSidebarFooterLoginClick">
+  <div class="btn-group admin-access-level">
+    <div class="user-type-wrapper">
+      <p class="user_name">Login</p>
+    </div>
+    <i class="arrow mdi mdi-chevron-right"></i>
+  </div>
+</div>
+-->
