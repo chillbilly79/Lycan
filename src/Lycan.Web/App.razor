@@ -1,19 +1,13 @@
 @using Lycan.Web.Layouts.DashboardLayout;
 @using Lycan.Web.Components.Authentication;
 
-<CascadingAuthenticationState>
-  <Router AppAssembly="@typeof(Program).Assembly">
-    <Found Context="routeData">
-      <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(DashboardLayout)">
-        <NotAuthorized>
-          <p>You are not authorized to access this resource.</p>
-        </NotAuthorized>
-      </AuthorizeRouteView>
-    </Found>
-    <NotFound>
-      <LayoutView Layout="@typeof(DashboardLayout)">
-        <p>Sorry, there's nothing at this address.</p>
-      </LayoutView>
-    </NotFound>
-  </Router>
-</CascadingAuthenticationState>
+<Router AppAssembly="@typeof(Program).Assembly">
+  <Found Context="routeData">
+    <RouteView RouteData="@routeData" DefaultLayout="@typeof(DashboardLayout)" />
+  </Found>
+  <NotFound>
+    <LayoutView Layout="@typeof(DashboardLayout)">
+      <p>Sorry, there's nothing at this address.</p>
+    </LayoutView>
+  </NotFound>
+</Router>
